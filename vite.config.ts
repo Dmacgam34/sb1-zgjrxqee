@@ -34,4 +34,19 @@ npm cache clean --force
 npm install
 npm install glob@latest
 npm install --save lru-cache
+npm install --save-dev gulp
+- name: Install dependencies
+  run: npm install
+
+- name: Install gulp globally (if needed)
+  run: npm install --global gulp-cli
+
+- name: Run gulp
+  run: npx gulp
+npm install patch-package --save-dev
+import pkg from "./package.json" assert { type: "json" };
+const pkg = require("./package.json");
+"scripts": {
+  "postinstall": "patch-package"
+}
 
