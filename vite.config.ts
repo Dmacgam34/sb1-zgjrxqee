@@ -23,3 +23,15 @@ export default defineConfig({
     },
   },
 });
+- name: Set up Node.js
+  uses: actions/setup-node@v3
+  with:
+    node-version: '18' # Use the latest LTS version
+import pkg from "./package.json" assert { type: "json" };
+const pkg = require("./package.json");
+"type": "module"
+npm cache clean --force
+npm install
+npm install glob@latest
+npm install --save lru-cache
+
